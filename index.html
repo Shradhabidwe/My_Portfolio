@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- meta tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="portfolio, simple portfolio, html,css">
+    <meta name="author" content="Shradha Bidwe">
+    
+
+
+
+
+
+
+    <!-- title -->
+    <title>shradha portfolio</title>
+
+    <!--google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
+
+
+    <!-- internal css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #050A30;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 90px;
+            background-color: rgb(2, 2, 21);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            border: white, 2px, solid;
+            color: rgb(103, 103, 210);
+            font-size: 1.04rem;
+        }
+
+        .left {
+            font-size: 1.8rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 8px 0;
+            align-items: center;
+
+        }
+
+        .firstsection>div {
+            width: 30%;
+
+        }
+
+        .leftsection {
+
+            font-size: 2.5rem;
+        }
+
+
+        .rightsection img {
+
+            width: 100%;
+            margin: 2px;
+
+        }
+
+
+        .purple {
+            color: blueviolet;
+        }
+
+
+        #element {
+            color: blueviolet;
+        }
+
+
+        main hr {
+            border: 0;
+            background: rgb(129, 93, 164);
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+
+        .secondsection .box {
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+
+        .secondsection .vertical {
+            height: 70px;
+            width: 1px;
+            background-color: white;
+            margin: 0 150px;
+
+        }
+
+        #secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 70px;
+            width: 150px;
+        }
+
+        .vertical-des {
+            font-size: 15px;
+            position: relative;
+            top: 80px;
+            width: 150px;
+            color: gray;
+        }
+
+        .orange {
+            color: orangered;
+        }
+
+
+
+
+
+
+        /* footer */
+        footer {
+            background-color: rgb(2, 2, 21);
+            height: 230px;
+            width: auto;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 10px;
+            justify-content: space-evenly;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer ul {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .footer li {
+            list-style: none;
+        }
+
+        .footer>div {
+            justify-content: center;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .footer-second {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .btn {
+            background-color: purple;
+            color: white;
+            border: 1px solid white;
+            border-radius: 6px;
+            font-size: 10px;
+            cursor: pointer;
+
+        }
+
+
+
+
+
+        /* portfolio */
+
+        .project_section {
+            max-width: 80vw;
+            margin: auto;
+            height: auto;
+        }
+
+
+
+
+
+        .project_container {
+
+            display: grid;
+            grid-template-rows: max-content(1fr);
+            /* display: flex;
+    flex-direction: column; */
+            justify-content: space-evenly;
+            align-items: center;
+
+
+
+        }
+
+
+        .project_item img {
+
+            max-width: 100%;
+            border-radius: 8px;
+            /* margin-left: 30px; */
+        }
+
+        .project_item {
+            /* display: block; */
+            display: flex;
+            flex-direction: row;
+            /* background-color:#c3a6a6; */
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 5px;
+
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            max-width: 300vw;
+            max-height: 500vh;
+
+            /* transition:transform 0.3s ease-in-out 1s; */
+
+        }
+
+        .project_item h4 {
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .project_item div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(82, 79, 79, 0.2);
+        }
+
+        .pitemd1 {
+            margin-right: 40px;
+
+        }
+
+        .project_item div {
+            width: 50%;
+        }
+
+        .project_item a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            /* background-color: #007bff; */
+            padding: 1px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            /* transition: background-color 0.3s ease; */
+        }
+
+        .project_item a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+
+
+
+</head>
+<!-- html code -->
+
+<body>
+    <header>
+
+        <!-- nav -->
+        <nav>
+            <div id="left"> Shradha's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Project</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- first sectionn left side -->
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Shradha</span>
+                <div> I have programming skills </div>
+                <span id="element"></span>
+                <button class="btn"> Download Resume</button>
+                <button class="btn" ondblclick="location.href='https://github.com'"> Visit Github</button>
+
+
+                <!-- right side img -->
+            </div>
+            <div class="rightsection">
+                <img src="dev.jpg" alt="">
+            </div>
+        </section>
+        <hr>
+
+
+
+        <!-- second section education -->
+        <section class="secondsection">
+            <h1>Ejucation</h1>
+            <div class="box">
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Higher Education:
+                    </div>
+                    <div class="vertical-des">
+                        <ul>
+                            <li>Bachelor of Science in Civil</li>
+                            <li>Annasaheb Dange College Of Engineering and Technology,Ashta,Sangli</li>
+                            <li>Expected graduation: 2023</li>
+                            <li>Achieved an overall percentage of <span class="orange">83.30%</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Higher Secondary Education:
+                    </div>
+                    <div class="vertical-des">
+                        <ul>
+                            <li>Milind High School,latur,Maharashtr</li>
+                            <li>Expected graduation: 2019</li>
+                            <li>Achieved an overall percentage of <span class="orange">62.45%</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vertical">
+
+                    <div class="vertical-title">
+                        Secondary education:
+                    </div>
+                    <div class="vertical-des">
+                        <ul>
+                            <li>Indira Patil School,Chakur,Maharashtr</li>
+
+                            <li>Expected graduation: 2017</li>
+                            <li>Achieved an overall percentage of <span class="orange">89.60%</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+
+
+        <hr>
+
+        <!-- portfolio section -->
+
+        <section id="project" class="project_section section">
+            <h2 class="section_title"> Poject</h2>
+            <span class="section_subtitle">Recent Project</span>
+            <div class="container project_container">
+
+                <!-- 1 -->
+                <div class="project_item">
+                    <div class="pitemd1">
+                        <h4>Amezon clone</h4>
+                    </div>
+                    <!-- <p> I did this clone with help of HTML and only CSS</p> -->
+
+                    <div><img src="amazon.png" alt="">
+                        <a href="https://shradhabidwe.github.io/Amazon-clone/"> Visit Amazon-clone</a>
+                    </div>
+
+
+                </div>
+
+                <!-- 2 -->
+                <div class="project_item">
+
+                    <div class="pitemd1">
+                        <h4>My_Music Website</h4>
+                    </div>
+                    <div> <img src="music.png" alt="">
+                        <a href=" https://shradhabidwe.github.io/My_Music/">visit My_Music</a>
+                    </div>
+                    <!-- <p>In this i used my HTML & CSS for front-end and JavaScript Programing language. </p> -->
+
+                </div>
+                <!-- 3 -->
+                <div class="project_item">
+                    <div class="pitemd1">
+                        <h4> Portfolio</h4>
+                    </div>
+                    <div><img src="My_portfolio.png" alt="">
+                        <a href="">Visit Portfolio</a>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="project_item">
+                    <div class="pitemd1">
+                        <h4>Myntra clone</h4>
+                    </div>
+                    <div><img src="Myntra_clone.png" alt="">
+                        <a href=""> Visit Myntra_clone</a>
+                    </div>
+
+                </div>
+
+
+
+                <!-- 5 -->
+
+                <div class="project_item">
+                    <div class="pitemd1">
+                        <h4>My Music Player</h4>
+                    </div>
+                    <div><img src="my_Music.png" alt="">
+                        <a href="">Visit My_Music_player</a>
+                    </div>
+
+
+                </div>
+
+        </section>
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Shradha's Portfolio</h3>
+            </div>
+
+            <div class="footer-second">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li> <a href="#">Education</a></li>
+                    <li> <a href="#">Project</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <a href="#" target="_blank"> <i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+        </div>
+        <div class="footer-rights">
+            www.shradhaportfolio.com | All right reserved
+            <div><b>contact me:</b> sxxxxxxxxxxxx2001@gmail.com</div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- little js -->
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['HTML', 'CSS', 'JavaScript', 'Java', 'MySQL'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+
+</html>
